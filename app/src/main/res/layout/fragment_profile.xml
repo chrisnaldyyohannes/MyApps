@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/photoIV"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:paddingBottom="8dp"
+                android:src="@drawable/default_pic"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTIL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photoIV"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameET"
+                    android:hint="@string/hint_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTIL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTIL"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailET"
+                    android:hint="email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ageTIL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailTIL"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ageET"
+                    android:hint="@string/hint_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/radioLayout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ageTIL"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/genderTV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standart_button_height"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="I am a"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGrup1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standart_button_height"
+                    android:layout_weight="2"
+                    android:paddingBottom="0dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMale1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFemale1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/radioLayout2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioLayout"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/genderprefTV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standart_button_height"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Looking for a"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGrup2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingBottom="0dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMale2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFemale2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/applyBtn"
+                android:layout_width="@dimen/standart_button_width"
+                android:layout_height="@dimen/standart_button_height"
+                android:layout_below="@id/radioLayout2"
+                style="@style/StandartButton"
+                android:text="Save"/>
+            <Button
+                android:id="@+id/signoutBtn"
+                android:layout_width="@dimen/standart_button_width"
+                android:layout_height="@dimen/standart_button_height"
+                android:layout_below="@id/applyBtn"
+                style="@style/StandartButtonGrey"
+                android:text="Sign Out"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progressLayout"
+        android:gravity="center"
+        android:background="#aaaaaaaa">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

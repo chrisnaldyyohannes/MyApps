@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.StartUpActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/startup_logo_width"
+        android:layout_height="@dimen/startup_logo_height"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tinder_clone_logo"
+        android:layout_margin="@dimen/startup_logo_margin"/>
+
+    <Button
+        android:layout_width="@dimen/standart_button_width"
+        android:layout_height="@dimen/standart_button_height"
+        android:text="@string/standart_button_login"
+        android:onClick="onLogin"
+        style="@style/StandartButton"/>
+
+    <Button
+        android:layout_width="@dimen/standart_button_width"
+        android:layout_height="@dimen/standart_button_height"
+        android:text="@string/standart_button_signup"
+        android:onClick="onSignup"
+        style="@style/StandartButton"/>
+</LinearLayout>
